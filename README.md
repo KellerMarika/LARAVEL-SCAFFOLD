@@ -54,4 +54,10 @@ controllo codice sorgente → inizializza repository
 importare sempre il model nel controller
 @use app/models/MyModel
 
+//8=> DATABASE - :
+avviare MAMP
+new  → 
+assegnare nome  → create
+→ import 
+allegare il file zip → go
 
