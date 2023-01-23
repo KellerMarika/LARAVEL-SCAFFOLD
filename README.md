@@ -3,28 +3,30 @@ powershell:
 
 // 1 => mi posiziono nella cartella e creo il progetto:
 
-
-cd ..\marika\BOOLEAN_projects\
-composer create-project laravel/laravel NOME_PRPGETTO_LARAVEL
+    cd ..\marika\BOOLEAN_projects\
+    composer create-project laravel/laravel NOME_PRPGETTO_LARAVEL
 
 ................................................................
 VISUAL STUDIO CODE - TERMINALE
 // 2=> scarico il pacchetto sass boottrap e modifico lo scaffold originale
 poi faccio partire il primo server.
+ 
+    composer require pacificdev/laravel_9_preset  
+    php artisan preset:ui bootstrap
+    
+    npm install  
+    npm run dev
 
-composer require pacificdev/laravel_9_preset
-php artisan preset:ui bootstrap
 
-npm install
-npm run dev
 .................................................................................
 //3=> avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
+php artisan serve  npm run dev
 
-php artisan serve
-
-
+    
+    php artisan serve
+    
 ..................................................................................................
-//5=> inizializzare repository github:
+//4=> inizializzare repository github:
 
 controllo codice sorgente → inizializza repository
 
@@ -40,12 +42,13 @@ controllo codice sorgente → inizializza repository
 .................................................................................
 //6=> CONTROLLER -creare nuovo controller:
 
-php artisan make:controller FirstController
+  
+    php artisan make:controller FirstController
 
 ........................................
 //7=> MODEL - creare un nuovo modello:
 
-php artisan make:model MyModel
+    php artisan make:model MyModel
 
 
 importare sempre il model nel controller
