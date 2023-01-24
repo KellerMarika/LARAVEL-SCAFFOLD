@@ -1,0 +1,4 @@
+layout possibili:
+public
+private (utente loggato)
+alert (no header o footer)
