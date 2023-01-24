@@ -55,11 +55,17 @@ importare sempre il model nel controller
 @use app/models/MyModel
 
 //8=> DATABASE - :
+
 avviare MAMP
+
 new  → 
+
 assegnare nome  → create
+
 → import 
+
 allegare il file zip → go
+
 ................................................................................
 //7=> ENV -direzionare al database:
 
@@ -67,7 +73,7 @@ allegare il file zip → go
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=laravel
+DB_DATABASE=DB_MY_SQL(crearne uno nuovo su php MyAdmin con nome repositorie)
 DB_USERNAME=root
 DB_PASSWORD=root
 ................................................................................
