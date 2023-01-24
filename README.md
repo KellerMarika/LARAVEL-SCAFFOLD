@@ -40,13 +40,13 @@ controllo codice sorgente → inizializza repository
 
 
 .................................................................................
-//6=> CONTROLLER -creare nuovo controller:
+//5=> CONTROLLER -creare nuovo controller:
 
   
     php artisan make:controller FirstController
 
 ........................................
-//7=> MODEL - creare un nuovo modello:
+//6=> MODEL - creare un nuovo modello:
 
     php artisan make:model MyModel
 
@@ -54,7 +54,7 @@ controllo codice sorgente → inizializza repository
 importare sempre il model nel controller
 @use app/models/MyModel
 
-//8=> DATABASE - :
+//7=> DATABASE - :
 
 avviare MAMP
 
@@ -86,11 +86,12 @@ DB_PASSWORD=root
 
 https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
 
-`php artisan make:migration nome_migration` - Crea una nuova migration
+//8=> MIGRATIONS
 
-- il nome deve seguire le seguenti convenzioni:
-    - per creare una tabella → `create_nome_table`
-    - per aggiornare una tabella già esistente → `update_qualcosa_to_nome_table` (il nome della migration deve finire con `[to|from|in]_name_table`)
+- per creare una tabella → `php artisan make:migration create_nome_table ` - Crea una nuova migration
+
+- per aggiornare una tabella già esistente → `php artisan make:migration update_qualcosa_to_nome_table` 
+ (il nome della migration deve finire con `[to|from|in]_name_table`)
 
 `php artisan migrate` - Esegue tutte le migration ancora da eseguire
 
