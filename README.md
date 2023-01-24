@@ -62,6 +62,8 @@ assegnare nome  → create
 allegare il file zip → go
 ................................................................................
 //7=> ENV -direzionare al database:
+
+
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -72,3 +74,13 @@ DB_PASSWORD=root
 
 
 https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
+
+`php artisan make:migration nome_migration` - Crea una nuova migration
+
+- il nome deve seguire le seguenti convenzioni:
+    - per creare una tabella → `create_nome_table`
+    - per aggiornare una tabella già esistente → `update_qualcosa_to_nome_table` (il nome della migration deve finire con `[to|from|in]_name_table`)
+
+`php artisan migrate` - Esegue tutte le migration ancora da eseguire
+
+`php artisan migrate:rollback` - Annulla l’ultimo gruppo di migration eseguite
