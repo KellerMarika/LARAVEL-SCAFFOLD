@@ -71,10 +71,15 @@ allegare il file zip → go
 
 
 DB_CONNECTION=mysql
+
 DB_HOST=127.0.0.1
+
 DB_PORT=3306
+
 DB_DATABASE=DB_MY_SQL(crearne uno nuovo su php MyAdmin con nome repositorie)
+
 DB_USERNAME=root
+
 DB_PASSWORD=root
 ................................................................................
 
