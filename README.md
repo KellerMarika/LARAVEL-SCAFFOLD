@@ -60,4 +60,15 @@ new  →
 assegnare nome  → create
 → import 
 allegare il file zip → go
+................................................................................
+//7=> ENV -direzionare al database:
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=root
+................................................................................
 
+
+https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
