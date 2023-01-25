@@ -99,5 +99,6 @@ https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
 
 (per poter utilizzare la funzione change all'interno di una migrtion occorre scaricare il pacchetto da terminale:
 
-composer require doctrine/dbal
+
+`composer require doctrine/dbal`
 
