@@ -96,3 +96,8 @@ https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
 `php artisan migrate` - Esegue tutte le migration ancora da eseguire
 
 `php artisan migrate:rollback` - Annulla l’ultimo gruppo di migration eseguite
+
+(per poter utilizzare la funzione change all'interno di una migrtion occorre scaricare il pacchetto da terminale:
+
+composer require doctrine/dbal
+
