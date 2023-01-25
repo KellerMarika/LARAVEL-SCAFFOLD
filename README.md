@@ -1,3 +1,6 @@
+https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32 
+
+
 COME INIZIARE:
 powershell:
 
@@ -84,8 +87,6 @@ DB_PASSWORD=root
 ................................................................................
 
 
-https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
-
 //8=> MIGRATIONS
 
 - per creare una tabella → `php artisan make:migration create_nome_table ` - Crea una nuova migration
@@ -102,3 +103,8 @@ https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
 
 `composer require doctrine/dbal`
 
+...........................................................................................................
+//9=> SEEDER
+- `php artisan make:seeder NameTableSeeder` - crea un seeder all’interno della cartella `database/seeders`. 
+- `php artisan db:seed UsersTableSeeder` - esegue il contenuto di un seeder.
+- 
