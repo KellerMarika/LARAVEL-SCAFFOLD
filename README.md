@@ -4,14 +4,17 @@ https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
 COME INIZIARE:
 powershell:
 
-// 1 => mi posiziono nella cartella e creo il progetto:
+// 1 =>
+mi posiziono nella cartella e creo il progetto:
 
     cd ..\marika\BOOLEAN_projects\
     composer create-project laravel/laravel NOME_PRPGETTO_LARAVEL
 
-................................................................
+.....................................................
 VISUAL STUDIO CODE - TERMINALE
-// 2=> scarico il pacchetto sass boottrap e modifico lo scaffold originale
+
+// 2=> 
+scarico il pacchetto sass boottrap e modifico lo scaffold originale
 poi faccio partire il primo server.
  
     composer require pacificdev/laravel_9_preset  
@@ -21,14 +24,16 @@ poi faccio partire il primo server.
     npm run dev
 
 
-.................................................................................
-//3=> avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
+.........................................................
+//3=>
+avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
 php artisan serve  npm run dev
 
     
     php artisan serve
     
-..................................................................................................
+.................................................
+
 //4=> inizializzare repository github:
 
 controllo codice sorgente → inizializza repository
@@ -42,14 +47,18 @@ controllo codice sorgente → inizializza repository
     url repository : copia e incolla da GitHub
 
 
-.................................................................................
-//5=> CONTROLLER -creare nuovo controller:
+................................................................
+
+//5=>
+CONTROLLER -creare nuovo controller:
 
   
     php artisan make:controller FirstController
 
 ........................................
-//6=> MODEL - creare un nuovo modello:
+
+//6=> 
+MODEL - creare un nuovo modello:
 
     php artisan make:model MyModel
 
@@ -69,8 +78,10 @@ assegnare nome  → create
 
 allegare il file zip → go
 
-................................................................................
-//7=> ENV -direzionare al database:
+........................................................
+
+//7=>
+ENV -direzionare al database:
 
 
 DB_CONNECTION=mysql
@@ -86,8 +97,8 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ................................................................................
 
-
-//8=> MIGRATIONS
+//8=>
+MIGRATIONS
 
 - per creare una tabella → `php artisan make:migration create_nome_table ` - Crea una nuova migration
 
@@ -104,7 +115,8 @@ DB_PASSWORD=root
 `composer require doctrine/dbal`
 
 ...........................................................................................................
-//9=> SEEDER
+//9=>
+SEEDER
 - `php artisan make:seeder NameTableSeeder` - crea un seeder all’interno della cartella `database/seeders`. 
 - `php artisan db:seed UsersTableSeeder` - esegue il contenuto di un seeder.
 - 
