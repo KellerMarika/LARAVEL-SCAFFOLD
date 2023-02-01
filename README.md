@@ -67,16 +67,13 @@ poi faccio partire il primo server.
     php artisan preset:ui bootstrap --auth
     
 !!ALTRIMENTI:!!
-    php artisan preset:ui bootstrap
-    
-    npm install  
-    npm run dev
-
+   `php artisan preset:ui bootstrap`
 .........................................................
 //4=>
+
 avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
-php artisan serve  npm run dev
-    
+
+    npm run dev
     php artisan serve
 ................................................................
 
@@ -95,14 +92,14 @@ MODEL - creare un nuovo modello con migration(-m), controller(-c) e rotte delle 
     php artisan make:model Entita -m -c -r 
 
 !!!!!!!!!ALTRIMENTI!!!!!!!!
-php artisan make:model Entita
+`php artisan make:model Entita
 php artisan make:migration create_entitas_table
-php artisan make:controller EntitaController --resource
+php artisan make:controller EntitaController --resource`
 
 
 
 importare sempre il model nel controller
-@use app/models/MyModel
+`@use app/models/MyModel`
 ......................................................
 
 
