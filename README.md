@@ -4,37 +4,16 @@ https://florian-boolean.notion.site/Laravel-2ea24bf28e484a6087331ed58f79db32
 COME INIZIARE:
 powershell:
 
-// 1 =>
-mi posiziono nella cartella e creo il progetto:
+// 0 =>
+mi posiziono nella cartella e creo il progetto, mi ci posiziono e apro visual studio code:
 
     cd ..\marika\BOOLEAN_projects\
     composer create-project laravel/laravel NOME_PRPGETTO_LARAVEL
-
+    cd NOME_PRPGETTO_LARAVEL
+    code .
 .....................................................
-VISUAL STUDIO CODE - TERMINALE
 
-// 2=> 
-scarico il pacchetto sass boottrap e modifico lo scaffold originale
-poi faccio partire il primo server.
- 
-    composer require pacificdev/laravel_9_preset  
-    php artisan preset:ui bootstrap
-    
-    npm install  
-    npm run dev
-
-
-.........................................................
-//3=>
-avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
-php artisan serve  npm run dev
-
-    
-    php artisan serve
-    
-.................................................
-
-//4=> inizializzare repository github:
+//1=> inizializzare repository github:
 
 controllo codice sorgente → inizializza repository
 
@@ -45,42 +24,11 @@ controllo codice sorgente → inizializza repository
     nome repository : origin
 
     url repository : copia e incolla da GitHub
+    
+.................................................
 
-
-................................................................
-
-//5=>
-CONTROLLER -creare nuovo controller:
-
-  
-    php artisan make:controller FirstController
-
-........................................
-
-//6=> 
-MODEL - creare un nuovo modello:
-
-    php artisan make:model MyModel
-
-
-importare sempre il model nel controller
-@use app/models/MyModel
-
-//7=> DATABASE - :
-
-avviare MAMP
-
-new  → 
-
-assegnare nome  → create
-
-→ import 
-
-allegare il file zip → go
-
-........................................................
-
-//7=>
+VISUAL STUDIO CODE - CONFIGURARE IL FILE .env
+//2=>
 ENV -direzionare al database:
 
 
@@ -97,6 +45,82 @@ DB_USERNAME=root
 DB_PASSWORD=root
 ................................................................................
 
+// 3=> scarico pacchetti
+VISUAL STUDIO CODE - TERMINALE
+
+IN CASO VOGLIAMO L’AUTENTIZAZIONE, PRIMA INSTALLIAMO LARAVEL/BREEZE
+
+    composer require laravel/breeze --dev
+    php artisan breeze:install 
+    blade
+    no
+    no
+    
+
+scarico il pacchetto sass boottrap e modifico lo scaffold originale
+poi faccio partire il primo server.
+ 
+    composer require pacificdev/laravel_9_preset  
+    
+!!!!SE ABBIAMO ATTIVATO LARAVEL BREEZE, IL COMANDO DOVRA’ ESSERE !!!!
+
+    php artisan preset:ui bootstrap --auth
+    
+!!ALTRIMENTI:!!
+    php artisan preset:ui bootstrap
+    
+    npm install  
+    npm run dev
+
+.........................................................
+//4=>
+avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
+php artisan serve  npm run dev
+    
+    php artisan serve
+................................................................
+
+//5=>
+CONTROLLER -creare nuovo controller:
+
+    php artisan make:controller FirstController
+
+........................................
+
+CRUD:
+
+//6=> 
+MODEL - creare un nuovo modello con migration(-m), controller(-c) e rotte delle crud nel controller (-r):
+
+    php artisan make:model Entita -m -c -r 
+
+!!!!!!!!!ALTRIMENTI!!!!!!!!
+php artisan make:model Entita
+php artisan make:migration create_entitas_table
+php artisan make:controller EntitaController --resource
+
+
+
+importare sempre il model nel controller
+@use app/models/MyModel
+......................................................
+
+
+//7=> DATABASE - IMPORTARE DA FILE ESISTENTE UN DB:
+
+avviare MAMP
+
+new  → 
+
+assegnare nome  → create
+
+→ import 
+
+allegare il file zip → go
+
+
+................................................................................
+
 //8=>
 MIGRATIONS
 
@@ -111,7 +135,6 @@ MIGRATIONS
 
 (per poter utilizzare la funzione change all'interno di una migrtion occorre scaricare il pacchetto da terminale:
 
-
 `composer require doctrine/dbal`
 
 ...........................................................................................................
@@ -119,4 +142,35 @@ MIGRATIONS
 SEEDER
 - `php artisan make:seeder NameTableSeeder` - crea un seeder all’interno della cartella `database/seeders`. 
 - `php artisan db:seed UsersTableSeeder` - esegue il contenuto di un seeder.
-- 
+
+.........................................................................................................
+//10=>
+ROUTE-WEB
+scorciatoia CRUD
+Route::resource()
+.........................................................................................................
+//11=>
+AUTENTICATOR
+- `admin` cartella utenti loggati (rotte admin). / su queste si faranno poi valutazioni sul ruolo
+- `guests`  cartella pubblica (rotte public) .
+
+voci:
+  ->group(funzione())
+  
+ ->middleware(['auth', 'verified'])
+ controlli pre richiesta 
+ ->name("admin.")
+ dove è collocato il file
+ ->prefix("admin") prefisso uri nome rotta 
+ 
+Route::middleware(['auth', 'verified'])
+    ->prefix("admin") 
+    ->name("admin.") 
+    ->group(function () {
+        Route::get('/', [DashboardController::class, "home"])->name('dashboard');
+        Route::get('/users', [DashboardController::class, "home"])->name('users');
+        Route::get('/pippo', [DashboardController::class, "home"])->name('pippo');
+
+        Route::resource("posts", PostController::class);
+  });
+  - Occorre poi decidere DOVE l’utente verrà reindirizzato DOPO che ha eseguito il login. Di default questo viene indirizzato su `\dashobard`. Per cambiare questo valore modifichiamo la variabile `HOME` dentro `app/Providers/RouteServiceProvider.php`
