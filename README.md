@@ -32,7 +32,7 @@ VISUAL STUDIO CODE - CONFIGURARE IL FILE .env
 ENV -direzionare al database:
 
 
-DB_CONNECTION=mysql
+`DB_CONNECTION=mysql
 
 DB_HOST=127.0.0.1
 
@@ -42,7 +42,7 @@ DB_DATABASE=DB_MY_SQL(crearne uno nuovo su php MyAdmin con nome repositorie)
 
 DB_USERNAME=root
 
-DB_PASSWORD=root
+DB_PASSWORD=root`
 ................................................................................
 
 // 3=> scarico pacchetti
@@ -155,15 +155,13 @@ AUTENTICATOR
 - `guests`  cartella pubblica (rotte public) .
 
 voci:
-  ->group(funzione())
+  `->group(funzione()) `
   
- ->middleware(['auth', 'verified'])
- controlli pre richiesta 
- ->name("admin.")
- dove è collocato il file
- ->prefix("admin") prefisso uri nome rotta 
+ ` ->middleware(['auth', 'verified'])` controlli pre richiesta 
+ `->name("admin.")` dove è collocato il file
+ `->prefix("admin")` prefisso uri nome rotta 
  
-Route::middleware(['auth', 'verified'])
+`Route::middleware(['auth', 'verified'])
     ->prefix("admin") 
     ->name("admin.") 
     ->group(function () {
@@ -171,6 +169,7 @@ Route::middleware(['auth', 'verified'])
         Route::get('/users', [DashboardController::class, "home"])->name('users');
         Route::get('/pippo', [DashboardController::class, "home"])->name('pippo');
 
-        Route::resource("posts", PostController::class);
-  });
+       
+       Route::resource("posts", PostController::class);
+  });`
   - Occorre poi decidere DOVE l’utente verrà reindirizzato DOPO che ha eseguito il login. Di default questo viene indirizzato su `\dashobard`. Per cambiare questo valore modifichiamo la variabile `HOME` dentro `app/Providers/RouteServiceProvider.php`
