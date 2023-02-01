@@ -72,13 +72,6 @@ avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il
     php artisan serve
 ................................................................
 
-//5=>
-CONTROLLER -creare nuovo controller:
-
-    php artisan make:controller FirstController
-
-........................................
-
 CRUD:
 
 //6=> 
@@ -86,11 +79,13 @@ MODEL - creare un nuovo modello con migration(-m), controller(-c) e rotte delle 
 
     php artisan make:model Entita -m -c -r 
 
-!!!!!!!!!ALTRIMENTI!!!!!!!!
-`php artisan make:model Entita
-php artisan make:migration create_entitas_table
-php artisan make:controller EntitaController --resource`
+!!!!!!!!!ALTRIMENTI MANUALMENTE !!!!!!!!
 
+`php artisan make:model Entita
+
+php artisan make:migration create_entitas_table
+
+php artisan make:controller EntitaController --resource`
 
 
 importare sempre il model nel controller
