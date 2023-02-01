@@ -46,7 +46,7 @@ IN CASO VOGLIAMO L’AUTENTIZAZIONE, PRIMA INSTALLIAMO LARAVEL/BREEZE
 
     composer require laravel/breeze --dev
     php artisan breeze:install 
-    blade
+    0 (blade)
     no
     no
     
