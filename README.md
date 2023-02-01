@@ -15,15 +15,9 @@ mi posiziono nella cartella e creo il progetto, mi ci posiziono e apro visual st
 
 //1=> inizializzare repository github:
 
-controllo codice sorgente → inizializza repository
+controllo codice sorgente → publish on github
 
-   poi selezionare la voce REMOTES → + 
-
-    richiede:
-
-    nome repository : origin
-
-    url repository : copia e incolla da GitHub
+recupera in automatioc il nome della repo ma va specificato che è public altrimenti mette private di default!!
     
 .................................................
 
