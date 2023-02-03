@@ -36,7 +36,13 @@ DB_DATABASE=DB_MY_SQL(crearne uno nuovo su php MyAdmin con nome repositorie)
 
 DB_USERNAME=root
 
-DB_PASSWORD=root`
+DB_PASSWORD=root
+
+FILESYSTEM_DISK=public`
+
+l'ultimo per uplodare i file
+
+
 ................................................................................
 
 // 3=> scarico pacchetti
