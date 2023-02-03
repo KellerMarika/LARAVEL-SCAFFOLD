@@ -68,6 +68,7 @@ poi faccio partire il primo server.
 avvio un nuovo terminale e faccio partire il secondo server da cui visualizzo il lavoro in tempo reale
 
     npm install
+    npm i bootstrap@5.3.0-alpha1 (aggiornamento bootstrap)
     npm run dev
     php artisan serve
 ................................................................
